@@ -10,3 +10,80 @@ git merage origin/main      (all file merage and showing you are current directo
 git pull origin main  ( this command combination of fetch & merge command.its update all directory files) 
 Do not use "git pull" command when same files both person use and updated because after data is confilected so this time better option use "git fetch" command for safe confilects handled.
 
+
+## `git fetch`
+
+Downloads latest changes from the remote repository **without merging** them into your current branch.
+
+```bash id="1t5s9e"
+git fetch
+```
+
+Example:
+
+```bash id="5q2kpa"
+git fetch origin
+```
+
+Use this when you want to:
+
+* see remote changes first
+* review differences before merging
+
+You can compare changes after fetch:
+
+```bash id="r4v8mb"
+git log HEAD..origin/main --oneline
+```
+
+---
+
+## `git pull`
+
+Fetches changes **and automatically merges** them into your current branch.
+
+```bash id="u6m3zs"
+git pull
+```
+
+Example:
+
+```bash id="k2n9fd"
+git pull origin main
+```
+
+Equivalent to:
+
+```bash id="v7a1xe"
+git fetch
+git merge
+```
+
+---
+
+## Main difference
+
+| Command     | Downloads Changes | Merges Automatically |
+| ----------- | ----------------- | -------------------- |
+| `git fetch` | Yes               | No                   |
+| `git pull`  | Yes               | Yes                  |
+
+---
+
+## Recommended workflow
+
+If working on important code:
+
+```bash id="f0w7lc"
+git fetch
+git diff origin/main
+```
+
+Then merge manually if everything looks good.
+
+---
+
+Official Git docs:
+
+* [Git fetch documentation](https://git-scm.com/docs/git-fetch?utm_source=chatgpt.com)
+* [Git pull documentation](https://git-scm.com/docs/git-pull?utm_source=chatgpt.com)

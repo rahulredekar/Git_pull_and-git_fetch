@@ -1,0 +1,12 @@
+
+When you other new project using other project repository working then use as compair to clone command 
+#git getch
+git fetch origin            (safe command as compair to pull)
+git status                  (verify data match or not)
+git merage origin/main      (all file merage and showing you are current directory)
+
+
+#Git Pull
+git pull origin main  ( this command combination of fetch & merge command.its update all directory files) 
+Do not use "git pull" command when same files both person use and updated because after data is confilected so this time better option use "git fetch" command for safe confilects handled.
+
